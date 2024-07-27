@@ -8,3 +8,5 @@
 .env
 
 **/*.md
+
+.husky/
