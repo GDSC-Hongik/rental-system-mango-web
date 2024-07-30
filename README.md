@@ -7,7 +7,7 @@
 `npm install`  
 을 통해 필요한 package 를 다운받습니다.
 
-`npm run start`  
+`npm run dev`  
 를 하면 프로젝트를 실행할 수 있습니다.
 
 ## docker 로 실행하기
