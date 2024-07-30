@@ -8,14 +8,15 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default tseslint.config(
-  eslint.configs.recommended,
-  ...tseslint.configs.strictTypeChecked,
-  {
-    languageOptions: {
-      parserOptions: {
-        project: true,
-        tsconfigRootDir: __dirname,
-      },
-    },
-  },
+	eslint.configs.recommended,
+	...tseslint.configs.strictTypeChecked,
+	{
+		languageOptions: {
+			parserOptions: {
+				project: true,
+				tsconfigRootDir: __dirname,
+			},
+		},
+		ignores: ['eslint.config.js', 'vite.config.ts'],
+	},
 );

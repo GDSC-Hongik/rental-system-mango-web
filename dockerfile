@@ -4,10 +4,10 @@ WORKDIR /front/app/
 
 COPY package.json package-lock.json /front/app/
 
-RUN npm install --force
+RUN npm install
 
 COPY . /front/app/
 
 EXPOSE 3000
 
-CMD [ "npm", "run", "start" ]
+CMD [ "npm", "run", "dev" ]
