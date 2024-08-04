@@ -4,6 +4,7 @@
 	"private": true,
 	"type": "module",
 	"dependencies": {
+		"@emotion/react": "^11.13.0",
 		"@tanstack/react-query": "^5.51.16",
 		"axios": "^1.7.2",
 		"react": "^18.3.1",
