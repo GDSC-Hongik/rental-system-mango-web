@@ -1,24 +1,23 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import Router from './routes';
-import ZustandTest from './simpleTest/ZustandTest';
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import ApiTestCompoent from '@components/ApiTest';
-
-const queryClient: QueryClient = new QueryClient({
-	/* options */
-});
+import ZustandTest from './simpleTest/ZustandTest';
+import { css } from '@emotion/react';
 
 function App() {
 	return (
 		<>
-			<QueryClientProvider client={queryClient}>
-				{/* zustand 테스트를 위한 컴포넌트 */}
-				<ZustandTest />
-				<Router />
-				<ApiTestCompoent />
-
-				<ReactQueryDevtools initialIsOpen={false} />
-			</QueryClientProvider>
+			<div
+				css={css`
+					color: blue;
+					&:hover {
+						color: red;
+					}
+				`}>
+				emotions 테스트입니다.
+			</div>
+			<p>app 컴포넌트입니다</p>
+			{/* zustand 테스트를 위한 컴포넌트 */}
+			<ZustandTest />
+			<ApiTestCompoent />
 		</>
 	);
 }
