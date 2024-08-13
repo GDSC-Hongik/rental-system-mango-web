@@ -2,8 +2,8 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 import { palette } from '@styles/palette';
 import { ButtonHTMLAttributes } from 'react';
-import blue_umbrella from '../imgs/blue_umbrella.svg';
-import white_umbrella from '../imgs/white_umbrella.svg';
+import blue_umbrella from '@imgs/blue_umbrella.svg';
+import white_umbrella from '@imgs/white_umbrella.svg';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	Status: RentStatus;

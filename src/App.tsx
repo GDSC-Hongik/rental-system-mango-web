@@ -1,11 +1,24 @@
-// import ApiTestCompoent from '@components/ApiTest';
 import ZustandTest from './simpleTest/ZustandTest';
 import { css } from '@emotion/react';
-import { RentButton, RentStatus, Stuff } from '@components/RentButton';
+import {
+	RentButton,
+	RentStatus,
+	Stuff,
+} from '@components/RentButton/RentButton';
+import { StudentImg } from '@components/StudentImg/StudentImg';
+import blue_umbrella from '@imgs/blue_umbrella.svg';
 
 function App() {
 	return (
 		<>
+			<StudentImg
+				size='small'
+				img={blue_umbrella}
+			/>
+			<StudentImg
+				size='big'
+				img={blue_umbrella}
+			/>
 			<RentButton
 				Status={{ Status: 'rent' } as RentStatus}
 				Stuff={{ Name: '우산', Id: 1 } as Stuff}></RentButton>
