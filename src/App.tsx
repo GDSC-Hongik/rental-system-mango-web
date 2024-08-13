@@ -7,10 +7,14 @@ import {
 } from '@components/RentButton/RentButton';
 import { StudentImg } from '@components/StudentImg/StudentImg';
 import blue_umbrella from '@imgs/blue_umbrella.svg';
+import { GradiantBox } from '@components/GradiantBox/GradiantBox';
 
 function App() {
 	return (
 		<>
+			<GradiantBox>
+				<></>
+			</GradiantBox>
 			<StudentImg
 				size='small'
 				img={blue_umbrella}
