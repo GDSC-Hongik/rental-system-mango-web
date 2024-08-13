@@ -85,7 +85,7 @@ const Rating = ({ value = 0, onConfirm, onClose }: RatingProps) => {
 			<div
 				className='rating-container'
 				css={css`
-					background-color: ${palette.white};
+					background-color: ${palette.background_color};
 					width: 326px;
 					height: 280px;
 					padding: 20px;
