@@ -1,10 +1,6 @@
 import ZustandTest from './simpleTest/ZustandTest';
 import { css } from '@emotion/react';
-import {
-	RentButton,
-	RentStatus,
-	Stuff,
-} from '@components/RentButton/RentButton';
+import { RentButton } from '@components/RentButton/RentButton';
 import { StudentImg } from '@components/StudentImg/StudentImg';
 import blue_umbrella from '@imgs/blue_umbrella.svg';
 import { GradiantBox } from '@components/GradiantBox/GradiantBox';
@@ -30,8 +26,10 @@ function App() {
 				img={blue_umbrella}
 			/>
 			<RentButton
-				Status={{ Status: 'rent' } as RentStatus}
-				Stuff={{ Name: '우산', Id: 1 } as Stuff}></RentButton>
+				Status={'wait'}
+				Name={'우산'}
+				Id={1}
+				Rating={3.2}></RentButton>
 			<div
 				css={css`
 					color: blue;
