@@ -8,10 +8,16 @@ import {
 import { StudentImg } from '@components/StudentImg/StudentImg';
 import blue_umbrella from '@imgs/blue_umbrella.svg';
 import { GradiantBox } from '@components/GradiantBox/GradiantBox';
+import { LoginButton } from '@components/LoginButton/LoginButton';
 
 function App() {
 	return (
 		<>
+			<LoginButton
+				onClick={() => {
+					console.log('working');
+				}}
+			/>
 			<GradiantBox>
 				<></>
 			</GradiantBox>
