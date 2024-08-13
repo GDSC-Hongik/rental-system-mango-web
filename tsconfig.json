@@ -6,7 +6,8 @@
 			"@components/*": ["src/components/*"],
 			"@pages/*": ["src/pages/*"],
 			"@routes/*": ["src/routes/*"],
-			"@styles/*": ["src/styles/*"]
+			"@styles/*": ["src/styles/*"],
+			"@imgs/*": ["src/imgs/*"]
 		},
 
 		"target": "ES2020",
