@@ -5,15 +5,75 @@ import { StudentImg } from '@components/StudentImg/StudentImg';
 import blue_umbrella from '@imgs/blue_umbrella.svg';
 import { GradiantBox } from '@components/GradiantBox/GradiantBox';
 import { LoginButton } from '@components/LoginButton/LoginButton';
+import { LoginAPI, refresh } from '@apis/LoginApi';
+import {
+	myRentRequstAPI,
+	rentRequstAllAPI,
+	rentRequstAPI,
+} from '@apis/rentApi';
 
 function App() {
 	return (
 		<>
 			<LoginButton
 				onClick={() => {
-					console.log('working');
+					LoginAPI({ studentId: 'A123456', password: 'password' })
+						.then((res) => {
+							console.log('success: ', res);
+						})
+						.catch((err: unknown) => {
+							console.log('err: ', err);
+						});
 				}}
 			/>
+			<button
+				onClick={() => {
+					refresh(localStorage.getItem('accessToken') as string)
+						.then((res) => {
+							console.log('success', res.accessToken);
+						})
+						.catch((err: unknown) => {
+							console.log(err);
+						});
+				}}>
+				refresh Button
+			</button>
+			<button
+				onClick={() => {
+					rentRequstAPI({ itemId: 1 })
+						.then((res) => {
+							console.log('success', res.deadlineDateTime);
+						})
+						.catch((err: unknown) => {
+							console.log(err);
+						});
+				}}>
+				rent Item
+			</button>
+			<button
+				onClick={() => {
+					rentRequstAllAPI()
+						.then((res) => {
+							console.log('success', res);
+						})
+						.catch((err: unknown) => {
+							console.log(err);
+						});
+				}}>
+				AllItems
+			</button>
+			<button
+				onClick={() => {
+					myRentRequstAPI()
+						.then((res) => {
+							console.log('success', res);
+						})
+						.catch((err: unknown) => {
+							console.log(err);
+						});
+				}}>
+				rent Item
+			</button>
 			<GradiantBox>
 				<></>
 			</GradiantBox>
