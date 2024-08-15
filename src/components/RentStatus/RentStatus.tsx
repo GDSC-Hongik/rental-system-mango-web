@@ -8,6 +8,8 @@ interface RentStatusButtonProps {
 	itemName: string; // 대여 물품 이름
 	startDate?: string; // 대여 시작일
 	dueDate?: string; // 반납 예정일
+	x: number;
+	y: number;
 }
 
 const RentStatusButton: React.FC<RentStatusButtonProps> = ({
@@ -15,6 +17,8 @@ const RentStatusButton: React.FC<RentStatusButtonProps> = ({
 	itemName,
 	startDate,
 	dueDate,
+	x,
+	y,
 }) => {
 	const getStatusStyles = () => {
 		switch (status) {
@@ -65,6 +69,9 @@ const RentStatusButton: React.FC<RentStatusButtonProps> = ({
 				padding: 10px;
 				border-radius: 10px;
 				${getStatusStyles()};
+
+				position: absolute;
+				transform: translate(${x}px, ${y}px);
 			`}>
 			<span
 				css={css`
