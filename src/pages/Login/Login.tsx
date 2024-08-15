@@ -43,7 +43,7 @@ const LoginPage = () => {
 					refreshToken: parsedRefreshToken,
 				}) === 'success'
 			) {
-				navigate('/MainPage'); // 로그인 성공 시 메인 페이지로 이동
+				navigate('/main-page'); // 로그인 성공 시 메인 페이지로 이동
 			} else {
 				setErrorMessage('회원 정보가 일치하지 않습니다');
 			}
