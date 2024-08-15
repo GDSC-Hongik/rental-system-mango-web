@@ -10,7 +10,7 @@ export default function Router() {
 			element: <MainPage />,
 		},
 		{
-			path: '/login',
+			path: '/',
 			element: <Login />,
 		},
 		{
