@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { css } from '@emotion/react';
 import { palette } from '../../styles/palette';
 import { typo } from '../../styles/typo';
+import { LoginReq } from '@apis/LoginApi';
 
 interface LoginModalProps {
 	onClose: () => void;
-	onLogin: (id: string, password: string) => void;
+	onLogin: (req: LoginReq) => Promise<void>;
 }
 
 const LoginModal: React.FC<LoginModalProps> = ({ onClose, onLogin }) => {
@@ -13,7 +14,13 @@ const LoginModal: React.FC<LoginModalProps> = ({ onClose, onLogin }) => {
 	const [password, setPassword] = useState('');
 
 	const handleLogin = () => {
-		onLogin(studentId, password); // 로그인 함수 호출
+		onLogin({ studentId, password })
+			.then(() => {
+				console.log('login successed');
+			})
+			.catch((err: unknown) => {
+				console.log('err: ', err);
+			}); // 로그인 함수 호출
 		onClose(); // 모달 닫기
 	};
 

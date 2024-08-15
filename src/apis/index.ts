@@ -40,11 +40,8 @@ axiosClient.interceptors.request.use(
 						return config;
 					}
 					case 'refresh need': {
-						const tkn = await refresh(refreshToken);
-						config.headers.Authorization = `Bearer ${tkn.accessToken}`;
-
-						localStorage.setItem('accessToken', tkn.accessToken);
-						localStorage.setItem('refreshToken', tkn.refreshToken);
+						await refresh(refreshToken);
+						config.headers.Authorization = `Bearer ${localStorage.getItem('accessToken') as string}`;
 						return config;
 					}
 					case 'failed': {
