@@ -1,14 +1,9 @@
-import RentStatusButton from '@components/RentStatus/RentStatus';
+import RentalPage from '@pages/RentPage';
 
 function App() {
 	return (
 		<>
-			<RentStatusButton
-				status='overdue'
-				itemName='우산1'
-				startDate='2024-02-12'
-				dueDate='2024-02-14'
-			/>
+			<RentalPage />
 		</>
 	);
 }
