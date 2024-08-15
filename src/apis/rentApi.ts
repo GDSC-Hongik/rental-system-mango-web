@@ -42,4 +42,25 @@ const myRentRequstAPI = async (): Promise<rentGetRes[]> => {
 	return res.data;
 };
 
+// interface StatusReq {
+// 	Status:
+// 		| 'APPROVAL_REQUESTED'
+// 		| 'CANCELED'
+// 		| 'APPROVED'
+// 		| 'REJECTED'
+// 		| 'BORROW'
+// 		| 'OVERDUE'
+// 		| 'RETURN_REQUESTED'
+// 		| 'RETURN';
+// 		rentalId: number;
+// }
+// const rentStatusAPI = async ({ Status, rentalId }: StatusReq) => {
+// 	const res = await axiosClient.patch<rentGetRes[]>('/rental', {params: {
+// 		rentalId: rentalId
+// 	}});
+
+// 	console.log('rent my Query ended');
+// 	return res.data;
+// };
+
 export { rentRequstAPI, rentRequstAllAPI, myRentRequstAPI };

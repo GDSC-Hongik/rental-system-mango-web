@@ -39,5 +39,10 @@ const AuthVerify = ({ accessToken, refreshToken }: tokens): verfiyCode => {
 	}
 };
 
+const isAdmin = (accessToken: string): boolean => {
+	const tkn = parseJwt(accessToken) as accessToken;
+	return tkn.role === 'ROLE_ADMIN';
+};
+
 export type { accessToken, refreshToken, verfiyCode };
-export { parseJwt, AuthVerify };
+export { parseJwt, AuthVerify, isAdmin };

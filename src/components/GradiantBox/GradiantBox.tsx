@@ -13,6 +13,7 @@ export const GradiantBox = ({ children }: children) => {
 				width: 390px;
 				height: 362px;
 				flex-shrink: 0;
+				position: releative;
 
 				background: ${palette.gradient.main_linear_1};
 			`}>

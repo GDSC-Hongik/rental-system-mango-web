@@ -8,12 +8,17 @@ const Notice: React.FC = () => {
 		<div
 			css={css`
 				background-color: rgba(255, 255, 255, 0.6); /* #FFFFFF 60% */
-				padding: 20px;
+				padding: 0px;
+				margin: 0px;
 				border-radius: 20px;
 				text-align: center;
 				color: ${palette.dark_color};
 				width: 336px;
 				height: 99px;
+
+				position: absolute;
+				top: 201px;
+				left: 27px;
 			`}>
 			<div
 				css={css`
