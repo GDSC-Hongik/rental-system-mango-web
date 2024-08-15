@@ -1,5 +1,5 @@
-import Login from '@pages/Login';
 import MainPage from '@pages/mainPage/MainPage';
+import Login from '@pages/Login/Login';
 import SignUp from '@pages/SignUp';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 

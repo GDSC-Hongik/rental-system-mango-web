@@ -22,7 +22,6 @@ const WhiteBox = ({ name, remain, total }: WhiteBoxProps) => {
 				background-color: #ffffff;
 				border-radius: 20px;
 				box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
-
 				border: none;
 				margin: 0px 14px 0px 0px;
 				padding: 0px;
