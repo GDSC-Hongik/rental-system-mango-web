@@ -6,11 +6,11 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 export default function Router() {
 	const router = createBrowserRouter([
 		{
-			path: '/',
+			path: '/main-page',
 			element: <MainPage />,
 		},
 		{
-			path: '/login',
+			path: '/',
 			element: <Login />,
 		},
 		{
